@@ -6,16 +6,40 @@ namespace Coutdown
     {
         static void Main(string[] args)
         {
-            while(number > 0)
+            Console.WriteLine("Hello World!");
+
+            CompereNumbers();// use method
+        }
+
+        static void CompereNumbers()
+        {
+            int numberOne;
+            int numberTwo;
+
+            Console.WriteLine("Please enter a number: ");
+            numberOne = TextToNumber(Console.ReadLine());
+            
+
+            Console.WriteLine("Please enter a number: ");
+            numberTwo = TextToNumber(Console.ReadLine());
+
+            if(numberOne > numberTwo)
             {
-                Console.WriteLine(number);
-                number--;
+                Console.WriteLine("First number was more than the Second");
             }
-            do
+            else
             {
-                Console.WriteLine(number);
-                number--;
-            } while number 0
+                Console.WriteLine("First number was less than the Second");
+            }
+        }
+
+        static int TextToNumber(string textNumber)
+        {
+            int number = 0;
+
+            int.TryParse(textNumber, out number);
+
+            return number;
         }
     }
 }
