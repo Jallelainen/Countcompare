@@ -36,6 +36,9 @@ namespace Coutdown
              5:compare if its still true = run step 3 once again
              */
 
+
+            /*
+             * WHILE-LOOP *
             bool keepLooping = true;
             while (keepLooping)
             {
@@ -49,7 +52,7 @@ namespace Coutdown
                  {
                     keepLooping = false;
                  }
-                */
+              
 
                 keepLooping = false;
 
@@ -73,8 +76,50 @@ namespace Coutdown
                     Console.WriteLine("Must type in an age greater than 0");
                     keepLooping = true;
                 }
-              
+              */
+
+            //* DO-WHILE-LOOP *
+            bool keepLooping;
+            do
+            {
+                keepLooping = false;
+                Console.Write("what's your age?\n Age:  ");
+                //  \n = new row
+                //int age = int.Parse(Console.ReadLine());
+                int age = Convert.ToInt32(Console.ReadLine());
+
+                /*
+                 if (age < 0)
+                 {
+                    keepLooping = false;
+                 }
+               */
+
+                keepLooping = false;
+
+                if (age >= 18)
+                {
+                    Console.WriteLine("Beer time! Let's go nuttin' mental");
+                }
+
+                else if (age > 2)
+                {
+                    Console.WriteLine("No beer for you. Take a soda and go away you litle rascal");
+                }
+
+                else if (age > 0)
+                {
+                    Console.WriteLine("Baby formula for you.");
+                }
+
+                else
+                {
+                    Console.WriteLine("Must type in an age greater than 0");
+                    keepLooping = true;
+                }
+
             }
+                while (keepLooping);
         }
 
         static void SymbolsEx()
