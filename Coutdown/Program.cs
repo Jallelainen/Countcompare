@@ -6,18 +6,47 @@ namespace Coutdown
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-                
-            
+
+
             // use method
-            
+
             //CompereNumbers(); 
 
-            Loops();
+            //Loops();
 
             //SymbolsEx();
 
             //NumbersEx();
+
+            bool runMenu = true;
+            do
+            {
+                Console.Clear();
+                Console.Write("-----Menu----- \n " +
+                    "Enter Loop to run loop method. \n " +
+                    "Enter quit to exit.\n" +
+                    "Selection:");
+
+                string userInput = Console.ReadLine();
+                switch (userInput)
+                {
+                    case "Loop":
+                        Loops();
+                        break;
+
+                    case "quit":
+                        runMenu = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("not a valid input.");
+                        break;
+                }
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+
+            }
+            while (runMenu);
 
         }
 
@@ -147,7 +176,6 @@ namespace Coutdown
 
         }
 
-
         static void NumbersEx()
         {
   
@@ -167,11 +195,6 @@ namespace Coutdown
             Console.WriteLine(1.0/3.0); // = 0.3333333
         }
 
-
-
-
-
-        // declare methods
         static void CompereNumbers()
         {
             int numberOne;
