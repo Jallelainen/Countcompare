@@ -22,8 +22,9 @@ namespace Coutdown
             do
             {
                 Console.Clear();
-                Console.Write("-----Menu----- \n " +
-                    "Enter Loop to run loop method. \n " +
+                Console.Write("--------------Menu-------------- \n " +
+                    "Enter Loop to run loop method. \n" +
+                    "Enter Full name to run full name method\n" +
                     "Enter quit to exit.\n" +
                     "Selection:");
 
@@ -34,7 +35,17 @@ namespace Coutdown
                         Loops();
                         break;
 
-                    case "quit":
+                    case "Full name":
+                        string firstName = AskUserFor("first name");
+                        string lastName = AskUserFor("last name");
+
+                        string fullName = CombineFirstAndLastNameIntoFullName(firstName, lastName);
+
+                        Console.WriteLine("your full name is:" + fullName);
+
+                        break;
+
+                    case "Quit":
                         runMenu = false;
                         break;
 
@@ -49,6 +60,21 @@ namespace Coutdown
             while (runMenu);
 
         }
+
+        static string AskUserFor(string whatFor)
+        {
+            Console.Write("Please enter" + whatFor + ": ");
+            string userInput = Console.ReadLine();
+
+            return userInput;
+        }
+        
+        static string CombineFirstAndLastNameIntoFullName(string firstName, string lastName)
+            {
+            string fullName = firstName + " " + lastName;
+            return fullName;
+
+            }
 
         static void Loops()
         {
