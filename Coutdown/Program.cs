@@ -7,21 +7,17 @@ namespace Coutdown
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+                
+            
+            // use method
+            
+            //CompereNumbers(); 
 
-            //CompereNumbers();// use method
+            Loops();
 
+            //SymbolsEx();
 
-            // aString.Length = how long is the string
-            for(int index = 0; index < aString.Length; index++)
-            {
-                /*
-                 array [index] picks out single symbols from aString
-                 aString "abc"
-                 index "012"
-                 */
-                Console.WriteLine(aString[index]);
-            }
-
+            //NumbersEx();
 
         }
 
@@ -43,7 +39,41 @@ namespace Coutdown
             bool keepLooping = true;
             while (keepLooping)
             {
+                Console.Write("what's your age?\n Age:  ");
+                //  \n = new row
+                //int age = int.Parse(Console.ReadLine());
+                int age = Convert.ToInt32(Console.ReadLine());
 
+                /*
+                 if (age < 0)
+                 {
+                    keepLooping = false;
+                 }
+                */
+
+                keepLooping = false;
+
+                if (age >= 18)
+                {
+                    Console.WriteLine("Beer time! Let's go nuttin' mental");
+                }
+
+                else if (age > 2)
+                {
+                    Console.WriteLine("No beer for you. Take a soda and go away you litle rascal");
+                }
+
+                else if (age > 0)
+                {
+                    Console.WriteLine("Baby formula for you.");
+                }
+
+                else
+                {
+                    Console.WriteLine("Must type in an age greater than 0");
+                    keepLooping = true;
+                }
+              
             }
         }
 
@@ -53,10 +83,22 @@ namespace Coutdown
             char aChar = 'a'; // a symbol = processed as a number (ASCII table)
             string aString = "abc"; //string of symbols
 
+
             // char + int = int + int / char + string = text only
             Console.WriteLine(aChar + "just a symbol and some text added together");
             Console.WriteLine(aChar + 1); //98
             Console.WriteLine(aString + 1); //abc1
+
+            // aString.Length = how long is the string
+            for(int index = 0; index < aString.Length; index++)
+            {
+                /*
+                 array [index] picks out single symbols from aString
+                 aString "abc"
+                 index "012"
+                 */
+                Console.WriteLine(aString[index]);
+            }
 
         }
 
