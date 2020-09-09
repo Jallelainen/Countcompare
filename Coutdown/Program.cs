@@ -10,6 +10,60 @@ namespace Coutdown
 
             //CompereNumbers();// use method
 
+
+            // aString.Length = how long is the string
+            for(int index = 0; index < aString.Length; index++)
+            {
+                /*
+                 array [index] picks out single symbols from aString
+                 aString "abc"
+                 index "012"
+                 */
+                Console.WriteLine(aString[index]);
+            }
+
+
+        }
+
+        static void Loops()
+        {
+            // init    compare increment
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+            /*
+             1:init will only run once
+             2:compare will check every loop (even the first time before the code block as
+             3:run code block 
+             4:incriment after code block has been run
+             5:compare if its still true = run step 3 once again
+             */
+
+            bool keepLooping = true;
+            while (keepLooping)
+            {
+
+            }
+        }
+
+        static void SymbolsEx()
+        {
+         
+            char aChar = 'a'; // a symbol = processed as a number (ASCII table)
+            string aString = "abc"; //string of symbols
+
+            // char + int = int + int / char + string = text only
+            Console.WriteLine(aChar + "just a symbol and some text added together");
+            Console.WriteLine(aChar + 1); //98
+            Console.WriteLine(aString + 1); //abc1
+
+        }
+
+
+        static void NumbersEx()
+        {
+  
             byte aByte = byte.MinValue; // 0 - 255
             short aShort = short.MaxValue; // -32k - +32k
             int aInt = int.MinValue; //-2.1 billion - +2.1 billion
@@ -24,13 +78,11 @@ namespace Coutdown
 
             //float/double/decimal = decimal number math
             Console.WriteLine(1.0/3.0); // = 0.3333333
-
-            char aChar = 'a'; // a symbol = processed as a number (ASCII table)
-            string aString = "abc"; //string of symbols
-
-            Console.WriteLine(aChar + 1); //98
-            Console.WriteLine(aString + 1); //abc1
         }
+
+
+
+
 
         // declare methods
         static void CompereNumbers()
