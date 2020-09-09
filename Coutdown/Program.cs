@@ -8,9 +8,31 @@ namespace Coutdown
         {
             Console.WriteLine("Hello World!");
 
-            CompereNumbers();// use method
+            //CompereNumbers();// use method
+
+            byte aByte = byte.MinValue; // 0 - 255
+            short aShort = short.MaxValue; // -32k - +32k
+            int aInt = int.MinValue; //-2.1 billion - +2.1 billion
+            long aLong = long.MaxValue; // 9.2 quintillion -||-
+
+            float aFloat = float.MaxValue; // 3,4028235E+38 Power of 38
+            double aDouble = double.MaxValue; // Power of 308
+            decimal aDecimal = decimal.MaxValue; // 79228162514264337593543950335
+
+            //byte/short/int/long = whole number math
+            Console.WriteLine(1/3); // = 0
+
+            //float/double/decimal = decimal number math
+            Console.WriteLine(1.0/3.0); // = 0.3333333
+
+            char aChar = 'a'; // a symbol = processed as a number (ASCII table)
+            string aString = "abc"; //string of symbols
+
+            Console.WriteLine(aChar + 1); //98
+            Console.WriteLine(aString + 1); //abc1
         }
 
+        // declare methods
         static void CompereNumbers()
         {
             int numberOne;
